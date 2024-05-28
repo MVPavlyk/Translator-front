@@ -237,7 +237,7 @@
 
   function updateSuggestions() {
     var text = inputField.value.trim().toLowerCase();
-    fetch(`http://localhost:8080/api/dictionary/search/french/${text}`)
+    fetch(`https://translating.onrender.com/api/dictionary/search/french/${text}`)
       .then((response) => response.json())
       .then((enteredWords) => {
         console.log(enteredWords);
@@ -280,7 +280,7 @@
 
     // Виконуємо запит до сервера для отримання перекладу слова
     fetch(
-      `http://localhost:8080/api/dictionary/translate/french/${inputWord}`
+      `https://translating.onrender.com/api/dictionary/translate/french/${inputWord}`
     )
       .then((response) => response.json()) // Використовуємо .json() для отримання JSON-об'єкта
       .then((data) => {
